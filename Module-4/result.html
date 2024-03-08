@@ -1,0 +1,226 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        border: 2px solid black;
+        margin: 80px auto;
+        padding-left:10px ;
+        width: 500px;
+    }
+    .sub{
+        display: flex;
+        margin: 15px;
+        justify-content: space-between;
+        width: 350px;
+    }
+    .button{
+        margin-left: 235px;
+    }
+    button{
+        width: 110px;
+        height: 30px;
+    }
+    .result{
+        padding: 20px 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+<body>
+    <div class="box">
+        <h2>Marksheet for Information Technology</h2>
+        <h3>Enter Marks</h3>
+        <ol>
+            <div class="sub">
+                <li>C Language</li>                
+                <input type="number" id="value" name="va" onblur="check(this)">
+            </div>
+            <div class="sub">
+                <li>C++ Language</li>
+                <input type="number" id="value" onblur="check(this)">
+            </div>
+            <div class="sub">
+                <li>Database</li>
+                <input type="number" id="value" onblur="check(this)">
+            </div>
+            <div class="sub">
+                <li>HTML</li>
+                <input type="number" id="value" onblur="check(this)">
+            </div>
+            <div class="sub">
+                <li>CSS</li>
+                <input type="number" id="value" onblur="check(this)">
+            </div>
+            <div class="sub">
+                <li>php</li>
+                <input type="number" id="value" onblur="check(this)">
+            </div>
+            <div class="sub">
+                <li>Core Java</li>
+                <input type="number" id="value" onblur="check(this)">
+            </div>
+        </ol>
+        <div class="button">
+            <button onclick="result()">Result</button>
+        </div>
+        <div class="result">
+            <div class="total">
+                Total is : <span></span>/350
+            </div>
+            <div class="percentage">
+                Percentage is : <span></span>%
+            </div>
+        </div>
+    </div>
+    <script>
+        function check(e) {
+            ev = e.values
+            console.log(typeof ev);
+            if (ev === "") {
+                console.log("s");
+            }
+            // console.log(ev);
+        }   
+        function result() {
+            console.log(document.querySelectorAll("#value").values)
+            let result = document.querySelectorAll("#value");
+            var total = 0;
+            result.forEach((e)=>{
+                console.log(e);
+            });
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        border: 2px solid black;
+        margin: 80px auto;
+        padding-left:10px ;
+        width: 500px;
+    }
+    .sub{
+        display: flex;
+        margin: 15px;
+        justify-content: space-between;
+        width: 350px;
+    }
+    .button{
+        margin-left: 235px;
+    }
+    button{
+        width: 110px;
+        height: 30px;
+    }
+    .result{
+        padding: 20px 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+<body>
+    <div class="box">
+        <h2>Marksheet for Information Technology</h2>
+        <h3>Enter Marks</h3>
+        <ol>
+            <div class="sub">
+                <li>C Language</li> 
+                <div class="input">
+                    <input type="number" class="value" name="va" onblur="check(this,'error1')"><br>
+                    <span class="error1"></span>
+                </div>               
+            </div>
+            <div class="sub">
+                <li>C++ Language</li>
+                <div class="input">
+                    <input type="number" class="value" onblur="check(this,'error2')"><br>
+                    <span class="error2"></span>
+                </div>
+            </div>
+            <div class="sub">
+                <li>Database</li>
+                <div class="input">
+                    <input type="number" class="value" onblur="check(this,'error3')"><br>
+                    <span class="error3"></span>
+                </div>
+            </div>
+            <div class="sub">
+                <li>HTML</li>
+                <div class="input">
+                    <input type="number" class="value" onblur="check(this,'error4')"><br>
+                    <span class="error4"></span>
+                </div>
+            </div>
+            <div class="sub">
+                <li>CSS</li>
+                <div class="input">
+                    <input type="number" class="value" onblur="check(this,'error5')"><br>
+                    <span class="error5"></span>
+                </div>
+            </div>
+            <div class="sub">
+                <li>php</li>
+                <div class="input">
+                    <input type="number" class="value" onblur="check(this,'error6')"><br>
+                    <span class="error6"></span>
+                </div>
+            </div>
+            <div class="sub">
+                <li>Core Java</li>
+                <div class="input">
+                    <input type="number" class="value" onblur="check(this,'error7')"><br>
+                    <span class="error7"></span>
+                </div>
+            </div>
+        </ol>
+        <div class="button">
+            <button onclick="result()">Result</button>
+        </div>
+        <div class="result">
+            <div class="total">
+                Total is : <span id="total"></span>/350
+            </div>
+            <div class="percentage">
+                Percentage is : <span id="percentage"></span>%
+            </div>
+        </div>
+    </div>
+    <script>
+        function check(e,val) {
+            let error =  document.querySelector("."+val);
+            if (e.value === "") {
+                console.log("empty");
+               error.innerText = "Please Fill this field";
+                error.style.color = "red";
+            }else{
+                error.innerText = "";
+            }
+        }   
+
+        function result() {
+            var values = document.querySelectorAll(".value");
+            var total = 0;
+            values.forEach(function(e) {
+                total += parseInt(e.value) || 0;
+            });
+
+            document.getElementById("total").textContent = total;
+            var percentage = (total / 350) * 100;
+            document.getElementById("percentage").textContent = percentage.toFixed(2);
+        }
+    </script>
+</body>
+</html>
