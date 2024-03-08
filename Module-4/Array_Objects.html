@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="heading">
+            <h1>Module-4 JAVASCRIPT BASIC & DOM </h1>
+            <h3>(Array And Object Questions)</h3>
+        </div>
+        <div class="QA">
+            <div class="questions">
+                <h4>Q.40 Write a JavaScript Program to display the current day and time in the following format.
+                    Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?</h4>
+                <pre><b>Ans.</b>
+                    let date = new Date();
+                    let day = date.getDay();
+                    let daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                    let hour = date.getHours();
+                    let minute = date.getMinutes();
+                    let second = date.getSeconds();
+                    let prepand = (hour >= 12) ? " PM " : " AM ";
+                    hour = (hour >= 12) ? hour - 12 : hour;
+
+                    if (hour === 0 && prepand === ' PM ') {
+                        if (minute === 0 && second === 0) {
+                            hour = 12;
+                            prepand = ' Noon';
+                        } else {
+                            hour = 12;
+                            prepand = ' PM';
+                        }
+                    }
+
+                    if (hour === 0 && prepand === ' AM ') {
+                        if (minute === 0 && second === 0) {
+                            hour = 12;
+                            prepand = ' Midnight';
+                        } else {
+                            hour = 12;
+                            prepand = ' AM';
+                        }
+                    }
+                    
+                    console.log(`Today is ${daylist[day]}. Current Time is ${hour}${prepand}:${minute} ${second} ` );</pre><hr><br> 
+            </div>
+            <div class="questions">
+                <h4>Q.41 Write a JavaScript program to get the current date?</h4>
+                <pre><b>Ans.</b>
+                    let date = new Date()
+                    let CurrentDate = date.getDate();
+                    console.log(CurrentDate);</pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.42 Write a JavaScript program to compare two objects?</h4>
+                <pre><b>Ans.</b></pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.43 Write a JavaScript program to convert an array of objects into CSV string?</h4>
+                <pre><b>Ans.</b></pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.44 Write a JavaScript program to capitalize first letter of a string?</h4>
+                <pre><b>Ans.</b>
+                    let data = "hello world!"
+                    let arr = data.split(" ")
+                    arr.forEach(e => {
+                        console.log(e.charAt(0).toUpperCase()+e.slice(1));
+                    })</pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q. 45 Write a JavaScript program to determine if a variable is array?</h4>
+                <pre><b>Ans.</b>
+                    let arr = ["hello","world"]
+                    console.log(Array.isArray(arr))</pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.46 Write a JavaScript program to clone an array?</h4>
+                <pre><b>Ans.</b>
+                        let arr =["hello","Shreynash"];
+                        let arr2 = [...arr];
+                        console.log(arr2);
+                </pre><br><hr>
+            </div>
+            <div class="questions">
+                <h4>Q.47 What is the drawback of declaring methods directly in JavaScript objects?
+                </h4>
+                <pre><b>Ans.</b></pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.48 Print the length of the string on the browser console using console.log()?</h4>
+                <pre><b>Ans.</b>
+                        let data = "hello world"
+                        console.log(data.length);
+                </pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.49 Change all the string characters to capital letters using toUpperCase() method?</h4>
+                <pre><b>Ans.</b>
+                        let string = "hello world";
+                        console.log(string.toUpperCase());
+                </pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.50 What is the drawback of declaring methods directly in JavaScript objects?
+                </h4>
+                <pre><b>Ans.</b></pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.51 Write a JavaScript program to get the current date. Expected Output : mm-dd-yyyy,mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy?</h4>
+                <pre><b>Ans.</b>
+                        let date = new Date();
+                        let day = date.getDate();
+                        let month = date.getMonth()+1;
+                        let year = date.getFullYear();
+                        console.log(`${month}-${day}-${year}`);  //mm-dd-yy
+                        console.log(`${month}/${day}/${year}`);  //mm/dd/yy
+                        console.log(`${day}-${month}-${year}`);  //mm-dd-yy
+                        console.log(`${day}/${month}/${year}`);  //mm/dd/yy
+                </pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.52 Use indexOf to determine the position of the first occurrence of a in 30 Days Of JavaScript?</h4>
+                <pre><b>Ans.</b>
+                        let string = "30 Days Of JavaScript";
+                        let index = string.indexOf("a");
+                        console.log(index);
+                </pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.53 Use lastindexOf to determine the position of the last occurrence of a in 30 Days Of
+                    JavaScript?</h4>
+                <pre><b>Ans.</b>
+                    let string = "30 Days Of JavaScript";
+                    let index = string.lastindexOf("a");
+                    console.log(index);
+                </pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.54 Form Validtion in JS?</h4>
+                <pre><b>Ans.</b> Form validation in javascript is used to get proper data from the user if user can not fill the data form validation shows error or if user can fill inappropriate data then form
+            validation shows error to user
+                </pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.55 Form in Email, number, Password, Validation?</h4>
+                <pre><b>Ans.</b></pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.56 Dynamic Form Validation in JS?</h4>
+                <pre><b>Ans.</b>
+                    function handleValidation(e , msg) {
+                        if (e.value == "") {
+                          console.log("Empty");
+                          document.getElementById(frank).innerText = "Enter valid " + msg;
+                          document.getElementById(frank).style.color = "red";
+                        } else {
+                          console.log("kuchToHai");
+                          console.log(e.value);
+                          document.getElementById(frank).innerText = "";
+                        }
+                      }
+                </pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.57 how many type of JS Event? How to use it ?</h4>
+                <pre><b>Ans.</b>
+            Events are the actions that occur in the browser. They are the actions that the user performs on the browser.
+            Some of the simple examples of events are: <ol><li>Button click</li><li>Mouse click</li><li>Keyboard input</li><li>Form submission</li><li>page load</li><li>Window resize</li></ol> 
+                </pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.59 What is Bom vs Dom in JS?</h4>
+                <pre><b>Ans.</b><ol><li>Browser Object Model (BOM):<br>The BOM refers to all the objects exposed by the web browser, allowing JavaScript to interact with the browser itself.</li><li>Document Object Model (DOM):<br>The DOM represents the structure of an HTML or XML document within a web page.</li></ol></pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.60 Array vs object defences in JS?</h4>
+                <pre><b>Ans.</b> The performance comparison between arrays and objects in JavaScript depends on various factors, including the size of data and the specific use case.<br>          Let’s explore the differences:</pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4>Q.61 Split the string into an array using split() Method?</h4>
+                <pre><b>Ans.</b>
+                        let string = "Hello my name is Shreyansh shah."
+                        let split = string.split(" ");
+                        console.log(split);</pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4></h4>
+                <pre><b>Ans.</b></pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4></h4>
+                <pre><b>Ans.</b></pre><hr><br>
+            </div>
+            <div class="questions">
+                <h4></h4>
+                <pre><b>Ans.</b></pre><hr><br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

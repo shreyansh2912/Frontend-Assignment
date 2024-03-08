@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.heading{
+    padding: 40px 370px;
+    text-align: center;
+}
+.QA{
+    border: 10px double black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+h4{
+    font-size: 20px;
+}
+b{
+    font-size: 20px;
+}
+hr{
+    margin-top: 20px;
+    border-color: black;
+}
+li{
+    margin-left: 40px;
+}
