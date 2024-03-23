@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+            <h1>Module-5 (JQuery Basic, Effects & Advanced)</h1>
+        <ul>
+            <li>
+               <h3>Q1.What is jquery?</h3>
+               <p><b>Ans.</b>  Jquery is a JavaScript liabrary. the slogan of jquery is "write less do more". It's main object to simplyfy javaScript complex structure.</p> 
+               <ul>Features:
+                    <li>HTML/DOM Manipulation: jQuery allows you to manipulate HTML elements and their properties easily.</li>
+                        <li>CSS Manipulation: You can modify CSS styles dynamically using jQuery.</li>
+                        <li>HTML Event Methods: jQuery provides methods to handle HTML events (e.g., clicks, mouse movements).</li>
+                        <li>Effects and Animations: You can create smooth animations and transitions.</li>
+                        <li>AJAX: jQuery simplifies making asynchronous requests to the server (e.g., fetching data without reloading the page).</li>
+               </ul>
+            </li>
+            <li>
+                <h3>Q2. How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery ,JQuery Animation?</h3>
+                <p><b>Ans.</b>
+                    <ul>
+                        <li>To set a specific CSS property for an element, use the css() method.Example <br>
+                             $('selectorname').css("property name","value");
+                        </li>
+                        <li>Adding CSS Classes Using jQuery: <br>
+                            To add CSS classes to an element, you can use the addClass() method. It allows you to add one or more classes to selected elements. <br>
+                            $("selector").addClass("class_name");
+                        </li>
+                        <li>Removing CSS Classes Using jQuery: <br>
+                            To remove specific CSS classes from elements, use the removeClass() method <br>
+                            $("selector").removeClass("class_name");
+                        </li>
+                        <li>Animating Elements Using jQuery: <br>
+                            While not directly related to CSS classes, jQuery also provides animation methods. <br>
+                            You can animate properties like width, height, opacity, etc. <br>
+                            $("button").click(function() { <br>
+                                $("h1").animate({ fontSize: "24px" }, 1000); <br>
+                              });
+                        </li>
+                    </ul>
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

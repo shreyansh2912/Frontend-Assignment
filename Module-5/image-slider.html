@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <style>
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 400px; 
+    }
+    .slider-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <img class="slider-image" src="img/Place Your Image Here (Double Click To Edit) (1).png" alt="Image 1">
+    <img class="slider-image" src="img/Place Your Image Here (Double Click To Edit) (2).png" alt="Image 2">
+    <img class="slider-image" src="img/Place Your Image Here (Double Click To Edit) (3).png" alt="Image 2">
+    <img class="slider-image" src="img/Place Your Image Here (Double Click To Edit).png" alt="Image 2">
+
+  </div>
+  <script>
+    $(document).ready(function() {
+        const images = $(".slider-image");
+        let currentIndex = 0;
+        function showNextImage() {
+            images.eq(currentIndex).fadeOut(500);
+            currentIndex = (currentIndex + 1) % images.length;
+            images.eq(currentIndex).fadeIn(500);
+            console.log("in");
+      }
+      showNextImage();
+      setInterval(showNextImage, 3000); 
+    });
+  </script>
+</body>
+</html>
