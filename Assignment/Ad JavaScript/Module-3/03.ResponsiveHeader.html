@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            cursor: pointer;
+        }
+        nav{
+            height: 70px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 25px;
+        }
+        img{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Logo</h1>
+        <div class="pages" id="page">
+            <ul>
+                <li>Home</li>
+                <li>Blog</li>
+                <li>Projects</li>
+                <li>Contact Us</li>
+                <li>About Us</li>
+            </ul>
+        </div>
+        <img src="" alt="Menu">
+    </nav>
+    <script>
+        window.onscroll = function() {handleRes()}
+        function handleRes() { 
+            let nav = document.getElementsByTagName("nav")
+            let page = document.getElementById("page")
+            page.style.display = "block";
+            if(window.innerWidth > 1000){
+                console.log(nav)
+                nav[0].style.backgroundColor = "red";
+                nav[0].style.color = "aliceBlue";
+            }
+            else if(window.innerWidth > 600){
+                nav[0].style.backgroundColor = "blue";
+            }
+            else{
+                nav[0].style.backgroundColor = "yellow";
+                page.style.display = "none"
+            }
+        }
+        handleRes()
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color:aliceblue
+        }
+        .black{
+            background-color: black;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .pink{
+            background-color: pink;
+        }
+        .purple{
+            background-color: purple;
+        }
+        .green{
+            background-color: green;
+        }
+        .all{
+            background-color: slateblue;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="handleColor(this)" class="btn black" >Black</button>
+    <button onclick="handleColor(this)" class="btn blue" >Blue</button>
+    <button onclick="handleColor(this)" class="btn green" >Green</button>
+    <button onclick="handleColor(this)" class="btn yellow" >Yellow</button>
+    <button onclick="handleColor(this)" class="btn pink" >Pink</button>
+    <button onclick="handleColor(this)" class="btn purple" >Purple</button>
+    <button onclick="handleColor(this)" class="btn all" >All</button>
+
+    <script>
+        let color = document.getElementsByClassName("btn")
+        function handleColor(e) {
+            if(e.classList[1] == "all"){
+                for (let i = 0; i < color.length; i++) {
+                    if(color[i].innerHTML != "All"){
+                        alert(color[i].innerHTML);
+                    }
+                }
+            }else{
+                alert(e.innerHTML)
+            }
+        }
+    </script>
+</body>
+</html>

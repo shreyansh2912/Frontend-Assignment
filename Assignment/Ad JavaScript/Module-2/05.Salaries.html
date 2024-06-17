@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let salaries = {
+            "Jhon": 100,
+            "Pete": 300,
+            "Mary": 250
+        }
+        function SumSalaries(sal) {
+            let total = 0;
+            for (const e in sal) {
+                total = total + sal[e]
+            } 
+            alert(total);
+        }
+        SumSalaries(salaries);
+    </script>
+</body>
+</html>
