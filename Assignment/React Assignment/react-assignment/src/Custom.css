@@ -1,0 +1,16 @@
+.br{
+    border-radius: 15px;
+}
+form{
+    padding: 20px;
+}
+th{
+    height: 50px;
+    padding-left: 10px;
+}
+td , th{
+    border: 1px solid black;
+}
+.num{
+    font-size: 28px;
+}
